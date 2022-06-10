@@ -1,0 +1,158 @@
+/* color theme (changed from default bootstrap colors) */
+.bg-color-1 {
+    background-color: #EEEBD0;
+}
+
+.bg-color-2 {
+    background-color: #6EB4D1;
+}
+
+.bg-color-3 {
+    background-color: #FF8484;
+}
+
+.bg-color-4 {
+    background-color: #AABD8C;
+}
+
+.bg-color-5 {
+    background-color: #333745;
+}
+
+.text-color-1 {
+    color: #EEEBD0;
+}
+
+.text-color-2 {
+    color: #6EB4D1;
+}
+
+.text-color-3 {
+    color: #FF8484;
+}
+
+.text-color-4 {
+    color: #AABD8C;
+}
+
+.text-color-5 {
+    color: #333745;
+}
+
+/* button style with color theme */
+.btn-outline-color-2 {
+    background-color: #5EA3D1;
+    border: 2px solid #6EB4D1;
+    color: rgba(0, 0, 0, 0.55);
+}
+
+.btn-outline-color-2:hover {
+    border: 2px solid #5EA3D1;
+}
+
+.btn-color-2 {
+    background-color: #6EB4D1;
+    border: 2px solid #6EB4D1;
+}
+
+.btn-color-2:hover {
+    background-color: #5EA3D1;
+    border: 2px solid #6EB4D1;
+}
+
+.btn-order {
+    margin-top: 70vh;
+}
+
+#home {
+    background: repeating-linear-gradient(135deg, #FF8484, #FF8484 10px, #EEEBD0 10px, #EEEBD0 200px);
+}
+
+.white-space-container {
+    height: 10vh;
+}
+
+.features-title {
+    height: 2%;
+    background: linear-gradient(#EEEBD0, #AABD8C 10px);
+}
+
+.estimate-box {
+    border: 2px solid #333745;
+    width: 100px;
+    padding: 5px;
+    margin-right: 5%;
+    margin-top: 15vh;
+    top: 15vh;
+}
+
+.estimate-box-sticky {
+    position: sticky;
+    z-index: 10;
+}
+
+.flavours-checkbox {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.sizes-radio {
+    margin: 0 auto;
+    width: 70%;
+}
+
+#prev-size {
+    display: none;
+}
+
+.chefs {
+    width: 100%;
+    border-radius: 2px;
+}
+
+.btn-chefs {
+    border: 6px solid #333745;
+}
+
+.chefs-details {
+    border-radius: 2px 2px 0px 0px; 
+}
+
+.card-chefs {
+    height: 420px;
+}
+
+/* modifying default accordion color theme */
+.accordion {
+    --bs-accordion-active-color: #FFFFFFF;
+    --bs-accordion-border-color: #333745;
+}
+
+.accordion-button {
+    color: #EEEBD0;
+    font-weight: bold;
+    font-size: small;
+}
+
+.accordion-button:focus {
+    border-color: #333745;
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+    color:#EEEBD0;
+    font-weight: bold;
+    background-color: #333745;
+}
+
+.accordion-item {
+    color: #EEEBD0;
+}
+
+.btn-next {
+    height: 15%;
+}
+
+#prev-chef {
+    display: none;
+}

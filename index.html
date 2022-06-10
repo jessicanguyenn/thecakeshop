@@ -1,1 +1,572 @@
-<h1>Hello World!<h1>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Cake World</title>
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md bg-color-2 sticky-top">
+        <div class="container-xxl">
+            <a href="#home" class="navbar-brand">
+                <span class="fw-bold text-color-5 px-3">
+                    CAKE WORLD
+                </span>
+            </a>
+            <!-- toggle button for mobile nav -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <!-- nav bar links -->
+        <div class="collapse navbar-collapse justify-content-end px-3 align-center" id="main-nav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="#features" class="nav-link fw-bold">CREATE</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#styles" class="nav-link fw-bold">STYLE</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link fw-bold">CONTACT</a>
+                </li>
+                <li class="nav-item d-md-none">
+                    <a href="#order" class="nav-link fw-bold">ORDER</a>
+                </li>
+                <li class="nav-item ms-2 d-none d-md-inline">
+                    <a href="#order" class="btn btn-outline-color-2 fw-bold">ORDER</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- home -->
+    <section id="home">
+        <div class="container-fluid bg-color-1 w-100 h-100 text-center p-0" id="home">
+            <div class="position-absolute top-50 start-50 translate-middle rounded-pill px-4 py-3 bg-color-4 shadow-lg">
+                <h1 class="display-1 text-center text-color-5 ps-4 pe-4 pt-4">CAKE WORLD</h1>
+                <h3 class="text-center text-color-5 fst-italic ps-4 pe-4 pb-4 fs-3 fw-light">Crumbly, creamy and everything in between</h3>
+            </div>
+            <a href="#features" class="btn btn-color-2 rounded-pill btn-order shadow-lg">
+                <h4 class="fw-bold text-color-5 m-2">Order a cake today!</h3>
+            </a>
+        </div>
+    </section>
+
+    <div>
+        <!-- floating box that shows estimate cost of services -->
+        <div class="rounded-2 bg-color-1 shadow-lg float-end estimate-box estimate-box-sticky">
+            <h6 class="text-center text-color-5 text-wrap">Estimate</h6>
+            <div class="text-center">
+                <span class="text-color-5 h4">$ </span><span class="text-color-5 h4" id="estimateCost">0</span>
+            </div>
+        </div>
+
+        <!-- features (services) -->
+        <section id="features">
+            <div class="container-fluid bg-color-4 w-100 p-0">
+                <div class="bg-color-1 w-100 text-center">
+                    <div class="container white-space-container"></div>
+                    <div class="container-fluid p-2">
+                        <h1 class="display-6 text-color-5">Create</h1>
+                        <h5 class="h5 fst-italic text-color-5">Time to design your cake!</h5>
+                    </div>
+                    <div class="features-title"></div>
+                </div>
+                <div class="container-lg p-5">
+                    <div class="row justify-content-center">
+                        <div class="col-md-3">
+                            <div class="p-3">
+                                <div class="text-center h2 text-color-5 text-wrap">Flavours</div>
+                                <div class="text-muted small text-color-5 text-wrap text-center">
+                                    Select one or many of the flavours below for your cake! (We recommend choosing between 1-2 flavours to for an ideal cake)
+                                </div>
+                                <div class="py-2 flavours-checkbox">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flavourCheckbox1" unchecked onchange="estimateCostFlavour(this, 5, 'Vanilla ($5)')">
+                                        <label class="form-check-label" for="flavourCheckbox1">
+                                            Vanilla ($5)
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flavourCheckbox2" unchecked onchange="estimateCostFlavour(this, 5, 'Chocolate ($5)')">
+                                        <label class="form-check-label" for="flavourCheckbox2">
+                                            Chocolate ($5)
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flavourCheckbox3" unchecked onchange="estimateCostFlavour(this, 5, 'Strawberry ($5)')">
+                                        <label class="form-check-label" for="flavourCheckbox3">
+                                            Strawberry ($5)
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flavourCheckbox4" unchecked onchange="estimateCostFlavour(this, 7, 'Red Velvet ($7)')">
+                                        <label class="form-check-label" for="flavourCheckbox4">
+                                            Red Velvet ($7)
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flavourCheckbox5" unchecked onchange="estimateCostFlavour(this, 7, 'Lemon ($7)')">
+                                        <label class="form-check-label" for="flavourCheckbox5">
+                                            Lemon ($7)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="p-3">
+                                <div class="text-center h2 text-color-5 text-wrap">Toppings</div>
+                                <div class="text-muted small text-color-5 text-wrap text-center">
+                                    Select which toppings you would like to have on your cake! Go crazy!
+                                </div>
+                                <div class="py-2 row small">
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="toppingCheckbox1" unchecked onchange="estimateCostTopping(this, 3, 'Chocolate chips ($3)')">
+                                            <label class="form-check-label" for="toppingCheckbox1">
+                                                Chocolate chips ($3)
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="toppingCheckbox2" unchecked onchange="estimateCostTopping(this, 5, 'Edible flowers ($5)')">
+                                            <label class="form-check-label" for="toppingCheckbox2">
+                                                Edible flowers ($5)
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="toppingCheckbox3" unchecked onchange="estimateCostTopping(this, 4, 'Coconut flakes ($4)')">
+                                            <label class="form-check-label" for="toppingCheckbox3">
+                                                Coconut flakes ($4)
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="toppingCheckbox4" unchecked onchange="estimateCostTopping(this, 4, 'Fondant icing ($4)')">
+                                            <label class="form-check-label" for="toppingCheckbox4">
+                                                Fondant icing ($4)
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="toppingCheckbox5" unchecked onchange="estimateCostTopping(this, 3, 'Marshmallow ($3)')">
+                                            <label class="form-check-label" for="toppingCheckbox5">
+                                                Marshmallow ($3)
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="toppingCheckbox6" unchecked onchange="estimateCostTopping(this, 4, 'Mixed berries ($4)')">
+                                            <label class="form-check-label" for="toppingCheckbox6">
+                                                Mixed berries ($4)
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="toppingCheckbox7" unchecked onchange="estimateCostTopping(this, 3, 'Candy ($3)')">
+                                            <label class="form-check-label" for="toppingCheckbox7">
+                                                Candy ($3)
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="toppingCheckbox8" unchecked onchange="estimateCostTopping(this, 2, 'Sprinkles ($2)')">
+                                            <label class="form-check-label" for="toppingCheckbox8">
+                                                Sprinkles ($2)
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="toppingCheckbox9" unchecked onchange="estimateCostTopping(this, 2, 'Frosting ($2)')">
+                                            <label class="form-check-label" for="toppingCheckbox9">
+                                                Frosting ($2)
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="toppingCheckbox10" unchecked onchange="estimateCostTopping(this, 3, 'Icing sugar ($3)')">
+                                            <label class="form-check-label" for="toppingCheckbox10">
+                                                Icing sugar ($3)
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="toppingCheckbox11" unchecked onchange="estimateCostTopping(this, 3, 'Caramel ($3)')">
+                                            <label class="form-check-label" for="toppingCheckbox11">
+                                                Caramel ($3)
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="p-3">
+                                <div class="text-center h2 text-color-5 text-wrap">Cake dimensions</div>
+                                <div class="text-muted small text-color-5 text-wrap text-center">
+                                    Select how you would like your cake to look! Is it for a big party? What about cupcakes? Up to you!
+                                </div>
+                                <div class="py-2 row">
+                                    <div class="col">
+                                        <div class="p-1 sizes-radio">
+                                            <div class="text-center h4 text-color-5">Cake size</div>
+                                            <div class="text-color-5 small">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="shapeRadio" id="shapeRadio1" onchange="sizeSelection('Round')">
+                                                    <label class="form-check-label" for="shapeRadio1">
+                                                        Round 
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="shapeRadio" id="shapeRadio2" onchange="sizeSelection('Rectangle/Square')">
+                                                    <label class="form-check-label" for="shapeRadio2">
+                                                        Rectangle/Square
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="shapeRadio" id="shapeRadio3" onchange="sizeSelection('Heart')">
+                                                    <label class="form-check-label" for="shapeRadio3">
+                                                        Heart
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="shapeRadio" id="shapeRadio4" onchange="sizeSelection('Cupcakes')">
+                                                    <label class="form-check-label" for="shapeRadio4">
+                                                        Cupcakes
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="p-1">
+                                            <div class="text-center h4 text-color-5">Servings</div>
+                                            <select class="form-select form-select-sm text-center" aria-label="Serving select" onchange="estimateCostServing(value); servingSelect(value)">
+                                                <option selected>Select a serving size</option>
+                                                <option value="5" id="4 ($5)">4 ($5)</option>
+                                                <option value="8" id="8 ($8)">8 ($8)</option>
+                                                <option value="9" name="10 ($9)">10 ($9)</option>
+                                                <option value="10" name="12 ($10)">12 ($10)</option>
+                                                <option value="12" name="16 ($12)">16 ($12)</option>
+                                                <option value="15" name="24 ($15)">24 ($15)</option>
+                                                <option value="20" name="36 ($20)">36 ($20)</option>
+                                                <option value="25" name="48 ($25)">48 ($25)</option>
+                                                <option value="35" name="60 ($35)">60 ($35)</option>
+                                                <option value="40" name="72 ($40)">72 ($40)</option>
+                                                <option value="45" name="80 ($45)">80 ($45)</option>
+                                                <option value="50" name="100 ($50)">100 ($50)</option>
+                                            </select>
+                                            <div id="prev-size">0</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#styles" class="btn btn-color-2 rounded-4 float-end shadow-lg">
+                                    <h4 class="fw-bold text-color-5 m-2">Next</h4>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping">@</span>
+                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping" id="username">
+                </div>
+                <button class="btn" type="button" onclick="myFunction()">Click</button>
+                <p id="test">Test</p>-->
+            </div>
+        </section>
+        
+        <!-- styles (experts/specialists) -->
+        <section id="styles">
+            <div class="container-fluid bg-color-3 w-100 p-0">
+                <div class="w-100 text-center">
+                    <div class="container white-space-container"></div>
+                    <div class="container-fluid p-2">
+                        <h1 class="display-6 text-color-5">Style</h1>
+                        <h5 class="h5 fst-italic text-color-5">Choose between our finest specialty chefs to bring your perfect cake to life!</h5>
+                        <small>Click on one of our chefs to select them.</small>
+                    </div>
+                </div>
+                <div id="prev-chef">0</div>
+                <div class="row justify-content-center px-5 py-3 m-0">
+                    <div class="col-md-4">
+                        <div class="card bg-color-5 text-color-1">
+                            <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" unchecked onchange="onSelectChef(25); styleSelection('Creative ($25)');">
+                            <label class="btn text-color-1 btn-chefs" for="option1">
+                                <div class="card-body text-center py-4 card-chefs">
+                                    <h4 class="card-title">
+                                        Creative ($25)
+                                    </h4>
+                                    <p class="lead card-subtitle">
+                                        Francis Young
+                                    </p>
+                                    <img src="/assets/chef1.jpg" alt="Chef 1" class="chefs py-2">
+                                    <small>Perfect for birthday parties and kids!</small>
+                                </div>
+                                <div class="accordion" id="accordion">
+                                    <div class="accordion-item bg-color-5 w-100">
+                                      <h2 class="accordion-header bg-color-5" id="headingOne">
+                                        <button class="accordion-button collapsed bg-color-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                          Click for more details
+                                        </button>
+                                      </h2>
+                                      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordion">
+                                        <div class="accordion-body">
+                                            Francis loves experimenting new things, adding splashes of colours to brighten up someone's day! With two little kids of his own, nothing brings him more joy than hoping he can bring the fun home to you (except his kids obviously!) Expect the unexpected!
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card bg-color-5 text-color-1">
+                            <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off" unchecked onchange="onSelectChef(30); styleSelection('Elegant ($30)');">
+                            <label class="btn text-color-1 btn-chefs" for="option2">
+                                <div class="card-body text-center py-4 card-chefs">
+                                    <h4 class="card-title">
+                                        Elegant ($30)
+                                    </h4>
+                                    <p class="lead card-subtitle">
+                                        Melissa Surrey
+                                    </p>
+                                    <img src="/assets/chef2.jpg" alt="Chef 2" class="chefs py-2">
+                                    <small>Looking for something simple but catches the eye? Look no further!</small>
+                                </div>
+                                <div class="accordion" id="accordion">
+                                    <div class="accordion-item bg-color-5 w-100">
+                                      <h2 class="accordion-header bg-color-5" id="headingTwo">
+                                        <button class="accordion-button collapsed bg-color-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                          Click for more details
+                                        </button>
+                                      </h2>
+                                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordion">
+                                        <div class="accordion-body">
+                                            Melissa, a winner of MasterChef Canada, has always been a perfectionist. She will surprise you by how elegant yet delicious, a cake could be baked with any ingredients you wish to have. 
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card bg-color-5 text-color-1">
+                            <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off" unchecked onchange="onSelectChef(70); styleSelection('Big Events ($70)');">
+                            <label class="btn text-color-1 btn-chefs" for="option3">
+                                <div class="card-body text-center py-4 card-chefs">
+                                    <h4 class="card-title">
+                                        Big events ($70+)
+                                    </h4>
+                                    <p class="lead card-subtitle">
+                                        Sarah Hamilton
+                                    </p>
+                                    <img src="/assets/chef3.jpg" alt="Chef 3" class="chefs py-2">
+                                    <small>Planning a wedding? A big get-together with your friends? Don't worry about the cake, we've got that covered for you!</small>
+                                </div>
+                                <div class="accordion" id="accordion">
+                                    <div class="accordion-item bg-color-5 w-100">
+                                      <h2 class="accordion-header collapsed bg-color-5" id="headingThree">
+                                        <button class="accordion-button bg-color-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                          Click for more details
+                                        </button>
+                                      </h2>
+                                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordion">
+                                        <div class="accordion-body">
+                                            Sarah is a master for grand gestures and special occasions! With over 5 years of experience as a professional cake planner for many weddings and parties, you will not be able to take your eyes off of her masterpieces! 
+                                        </div>
+                                        <small>You must choose this option if you are planning for a serving size of 48+ people.</small>
+                                      </div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-lg px-5 btn-next">
+                    <a href="#order" class="btn btn-color-2 rounded-4 float-end shadow-lg btn-next-chefs mx-3">
+                        <h4 class="fw-bold text-color-5 m-2">Next</h4>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+
+    <!-- order page (booking page) -->
+    <section id="order">
+        <div class="container-fluid bg-color-5 w-100 p-0">
+            <div class="rounded-2 bg-color-1 shadow-lg float-end estimate-box">
+                <h6 class="text-center text-color-5 text-wrap">Estimate</h6>
+                <h4 class="text-center">
+                    <span class="text-color-5 h4">$ </span>
+                    <span class="text-color-5 h4" id="estimateCostBook">0</span>
+                </h4>
+            </div>
+            <div class="w-100">
+                <div class="container white-space-container"></div>
+                <div class="container-fluid p-2 text-center">
+                    <h1 class="display-6 text-color-4">Style</h1>
+                    <h5 class="h5 fst-italic text-color-4">Time to book a day to receive your special cake!</h5>
+                </div>
+                <div class="container-lg p-5">
+                    <div class="row">
+                        <div class="col-md-6"> 
+                            <div class="p-3 bg-color-1 rounded-2">
+                                <form>
+                                    <div class="row my-2">
+                                        <div class="col-md-5">
+                                            <label for="order-date" class="fw-bold form-label">Order date and time: </label>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <input type="date" id="order-date" name="order-date" class="form-control">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <input type="time" id="time" name="time" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="row my-2">
+                                        <div class="col-md-5">
+                                            <label for="name" class="form-label fw-bold">Name: </label>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                                        </div>
+                                    </div>
+                                    <div class="row my-2">
+                                        <div class="col-md-5">
+                                            <label for="email" class="form-label fw-bold">Email: </label>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                                        </div>
+                                    </div>
+                                    <div class="row my-2">
+                                        <div class="col-md-5">
+                                            <label for="phoneNumber" class="form-label fw-bold">Phone number: </label>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <input type="text" class="form-control" id="phoneNumber" placeholder="Enter your phone number">
+                                        </div>
+                                    </div>
+                                    <div class="my-2">
+                                        <label for="comments" class="form-label fw-bold">Any requests/allergies/comments let us know!</label>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                    </div>
+
+                                    <!-- booking confirmation -->
+                                    <div class="my-2 ">
+                                        <div id="liveAlertPlaceholder"></div>
+                                        <button type="button" class="btn btn-color-2 rounded-4 text-color-5 fw-bold" id="liveAlertBtn">Submit</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-3 bg-color-1 rounded-2">
+                                <div class="accordion" id="accordion2">
+                                    <div class="accordion-item bg-color-5">
+                                        <h2 class="accordion-header" id="heading1">
+                                            <button class="accordion-button collapsed bg-color-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1" onchange="getFlavours()">
+                                                Flavours
+                                            </button>
+                                        </h2>
+                                        <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#accordion2">
+                                            <div class="accordion-body" id="acc1"></div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item bg-color-5">
+                                        <h2 class="accordion-header" id="heading2">
+                                            <button class="accordion-button collapsed bg-color-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                                Toppings
+                                            </button>
+                                        </h2>
+                                        <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordion2">
+                                            <div class="accordion-body" id="acc2"></div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item bg-color-5">
+                                      <h2 class="accordion-header" id="heading3">
+                                        <button class="accordion-button collapsed bg-color-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                          Shape
+                                        </button>
+                                      </h2>
+                                      <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordion2">
+                                        <div class="accordion-body" id="acc3">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="accordion-item bg-color-5">
+                                        <h2 class="accordion-header" id="heading4">
+                                            <button class="accordion-button collapsed bg-color-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                                Size
+                                            </button>
+                                        </h2>
+                                        <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordion2">
+                                            <div class="accordion-body" id="acc4">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item bg-color-5">
+                                        <h2 class="accordion-header" id="heading5">
+                                            <button class="accordion-button collapsed bg-color-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                                Style
+                                            </button>
+                                        </h2>
+                                        <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordion2">
+                                            <div class="accordion-body" id="acc5">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact info -->
+    <section id="contact">
+        <div class="container-fluid bg-color-1 w-100 p-0">
+            <div class="container white-space-container"></div>
+            <div class="container-fluid text-center text-color-5">
+                <h1 class="display-6">Contact us!</h1>
+                <h4 class="h6 fst-italic p-4">Phone number: 613-123-4567</h4>
+            </div>
+            <div class="container-lg p-2">
+                <div class="row justify-content-center">
+                    <div class="col-md-4">
+                        <div class="p-1">
+                            <div class="text-center h4 text-color-5 text-wrap">Working Hours</div>
+                            <ul class="list-group list-group-flush bg-color-1">
+                                <li class="list-group-item bg-color-1">Sunday: 10:00 - 18:00</li>
+                                <li class="list-group-item bg-color-1">Monday: 9:00 - 17:00</li>
+                                <li class="list-group-item bg-color-1">Tuesday: 9:00 - 17:00</li>
+                                <li class="list-group-item bg-color-1">Wednesday: 9:00 - 17:00</li>
+                                <li class="list-group-item bg-color-1">Thursday: 9:00 - 17:00</li>
+                                <li class="list-group-item bg-color-1">Friday: 9:00 - 17:00</li>
+                                <li class="list-group-item bg-color-1">Saturday: 10:00 - 19:00</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-1">
+                            <div class="text-center h4 text-color-5 text-wrap">Location</div>
+                            <ul class="list-group list-group-flush bg-color-1">
+                                <li class="list-group-item bg-color-1 text-center">75 Laurier Ave. E, Ottawa, ON K1N 6N5</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+
+    <script src="main.js"></script>
+</body>
+</html>
