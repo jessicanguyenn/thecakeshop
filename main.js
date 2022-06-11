@@ -1,6 +1,4 @@
-function myFunction() {
-    document.getElementById("test").innerHTML = document.getElementById("username").value;
-}
+// javascript code
 
 // add cost from flavours and to booking page
 function estimateCostFlavour(elem, cost, item) {
