@@ -156,3 +156,7 @@
 #prev-chef {
     display: none;
 }
+
+.book {
+    min-height: 425px;
+}
